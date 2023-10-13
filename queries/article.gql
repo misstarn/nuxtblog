@@ -1,0 +1,81 @@
+query Articles($filters: ArticleFiltersInput) {
+  articles(filters: $filters) {
+     data {
+      id
+      attributes {
+        title
+        description
+        slug
+        cover {
+          data {
+            attributes {
+              url
+              name
+            }
+          }
+        }
+        author {
+          data {
+            attributes {
+              name
+              avatar {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        category {
+          data {
+            attributes {
+              name
+            }
+          }
+        }
+        read,
+        commentCount,
+        createdAt
+        blocks {
+          ... on ComponentSharedRichText {
+            body
+          }
+        }
+        seo {
+          id
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                name
+                url
+              }
+            }
+          }
+          metaSocial {
+            id
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  name
+                  url
+                }
+              }
+            }
+          }
+          keywords
+          metaRobots
+          structuredData
+          metaViewport
+          canonicalURL
+        }
+      }
+    }
+  }
+}

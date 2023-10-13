@@ -1,0 +1,52 @@
+query Articles($pagination: PaginationArg, $filters: ArticleFiltersInput, $sort: [String]) {
+  articles(pagination: $pagination, filters: $filters, sort: $sort) {
+    meta {
+      pagination {
+        total
+        page
+        pageSize
+        pageCount
+      }
+    }
+    data {
+      id
+      attributes {
+        title
+        description
+        slug
+        cover {
+          data {
+            attributes {
+              url
+              name
+            }
+          }
+        }
+        author {
+          data {
+            attributes {
+              name
+              avatar {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        category {
+          data {
+            attributes {
+              name
+            }
+          }
+        }
+        read
+        createdAt
+        commentCount
+      }
+    }
+  }
+}

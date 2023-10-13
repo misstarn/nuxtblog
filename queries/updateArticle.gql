@@ -1,0 +1,12 @@
+mutation UpdateArticle($updateArticleId: ID!, $data: ArticleInput!) {
+  updateArticle(id: $updateArticleId, data: $data) {
+    data {
+      id
+      attributes {
+        read
+        commentCount
+        updatedAt
+      }
+    }
+  }
+}

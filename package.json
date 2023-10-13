@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@invictus.codes/nuxt-vuetify": "^0.3.0",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/apollo": "^5.0.0-alpha.7",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "graphql": "^16.8.1",
+    "nuxt": "^3.7.4",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.2",
+    "@pinia/nuxt": "^0.4.11",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@vue/apollo-composable": "^4.0.0-beta.11",
+    "crypto-js": "^4.1.1",
+    "date-fns": "^2.30.0",
+    "marked": "^9.1.0",
+    "pinia": "^2.1.6",
+    "pinia-plugin-persistedstate": "^3.2.0",
+    "prismjs": "^1.29.0",
+    "qs": "^6.11.2"
+  }
+}
